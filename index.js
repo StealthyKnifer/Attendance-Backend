@@ -7,7 +7,7 @@ const puppeteer = require('puppeteer');
 //Scraper
 
 const login = async (page, username, password) => {
-    await page.goto("https://kiitportal.kiituniversity.net/irj/portal/", { waitUntil: 'networkidle2' });
+    await page.goto("https://kiitportal.kiituniversity.net/irj/portal/", { waitUntil: 'networkidle2', timeout: 0 });
     await page.focus("#logonuidfield");
     await page.keyboard.type(username);
     await page.focus("#logonpassfield");
